@@ -254,3 +254,35 @@ When starting a Claude Code session in this repo:
 3. Read `SKILL-STANDARD.md` before writing any new skill
 4. Read the relevant reference repo patterns before building something new
 5. Always run a skill through the SKILL.md format checklist before marking it done
+
+---
+
+## Project History & Key Decisions
+
+### Session 1 — Foundation (March 2026)
+**What was built:**
+- CLAUDE.md, SKILL-STANDARD.md (13-section standard)
+- investment-side/ic-memo/SKILL.md v2.0.0
+- operating-side/finance/SKILL.md v2.0.0
+- meta/skill-improver/SKILL.md
+- 5 slash commands: /ic-memo, /kpi-review, /run-evals, /improve-skill, /new-skill
+- run_evals.py (stdlib eval runner for both skills)
+- failure-log.md templates (both skills)
+- setup.py (one-time repo setup)
+
+**Key architectural decisions made:**
+- Skills rated 74/100 (ic-memo) and 79/100 (finance) — gaps in eval runner, action layer, and memory backend
+- Build skill CLUSTERS not isolated skills — chain due-diligence -> ic-memo -> board-pack
+- Karpathy loop applied to skill improvement: failure log -> /improve-skill -> version bump
+- 13 required sections per skill (including Evals, Observability, HITL, Memory, Action Layer)
+- Two-layer rule: Universal layer + Firm layer in every operating-side skill
+- All action layers currently status: planned — need tools/ folder in Phase 2
+
+**What's next (Phase 1 remaining):**
+- investment-side/board-pack/SKILL.md
+- investment-side/due-diligence/SKILL.md
+- investment-side/portfolio-monitoring/SKILL.md
+- personas/deal-analyst.md
+- personas/operating-partner.md
+- core/.mcp.json (wire up PitchBook, Chronograph)
+- Run /run-evals on both live skills against real deals
