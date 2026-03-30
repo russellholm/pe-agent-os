@@ -1,0 +1,79 @@
+{
+  "name": "pe-agent-os",
+  "version": "0.1.0",
+  "description": "Agent operating system for small private equity firms. Automates investment workflows and replaces G&A functions at portfolio companies.",
+  "skills": [
+    {
+      "name": "ic-memo",
+      "path": "investment-side/ic-memo/SKILL.md",
+      "domain": "investment-side",
+      "version": "2.0.0"
+    },
+    {
+      "name": "finance-gna",
+      "path": "operating-side/finance/SKILL.md",
+      "domain": "operating-side",
+      "version": "2.0.0"
+    },
+    {
+      "name": "skill-improver",
+      "path": "meta/skill-improver/SKILL.md",
+      "domain": "meta",
+      "version": "1.0.0"
+    }
+  ],
+  "commands": [
+    {
+      "name": "ic-memo",
+      "path": ".claude/commands/ic-memo.md",
+      "description": "Draft an investment committee memo from deal materials"
+    },
+    {
+      "name": "kpi-review",
+      "path": ".claude/commands/kpi-review.md",
+      "description": "Run finance G&A skill for a portco monthly close or KPI review"
+    },
+    {
+      "name": "improve-skill",
+      "path": ".claude/commands/improve-skill.md",
+      "description": "Analyze failure logs and propose a skill improvement"
+    },
+    {
+      "name": "run-evals",
+      "path": ".claude/commands/run-evals.md",
+      "description": "Run the eval suite for a skill and report pass/fail"
+    },
+    {
+      "name": "new-skill",
+      "path": ".claude/commands/new-skill.md",
+      "description": "Scaffold and draft a new skill following the PE Agent OS standard"
+    }
+  ],
+  "mcp_connectors": [
+    {
+      "name": "pitchbook",
+      "url": "https://premium.mcp.pitchbook.com/mcp",
+      "purpose": "Deal sourcing, sector comps, transaction multiples"
+    },
+    {
+      "name": "chronograph",
+      "url": "https://ai.chronograph.pe/mcp",
+      "purpose": "Portfolio company monitoring and KPI tracking"
+    },
+    {
+      "name": "spglobal",
+      "url": "https://kfinance.kensho.com/integrations/mcp",
+      "purpose": "Financial data, public comps, leverage benchmarks"
+    },
+    {
+      "name": "factset",
+      "url": "https://mcp.factset.com/mcp",
+      "purpose": "Financial modeling data and benchmarks"
+    },
+    {
+      "name": "morningstar",
+      "url": "https://mcp.morningstar.com/mcp",
+      "purpose": "Market benchmarks and sector data"
+    }
+  ]
+}
